@@ -1,0 +1,265 @@
+/* ---resret css--- */
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* -----Header----- */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    padding: 15px 100px;
+}
+h1{
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/music-note.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-indent: -9999999999px;
+    margin-right: 150px;
+}
+h1 a{
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+header li{
+    margin-right: 20px;
+    position: relative;
+}
+header a{
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+    position: relative;
+}
+header li a::before{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 2s;
+}
+header li a:hover::before{
+    width: 100%;
+}
+header li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width 2s;
+}
+header li a:hover::after{
+    width: 100%;
+}
+
+/* -----Main----- */
+main{
+    padding: 50px 50px;
+}
+main h2{
+    font-size: 24px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.hits article{
+    width: 300px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+.hits article section{
+    height: 244px;
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+    position: relative;
+}
+.like{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/like.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: background-image 1s;
+}
+.like:hover{
+    cursor: pointer;
+    background-image: url(../img/like\ color.png);
+}
+.trackfoto{
+    width: 100%;
+    height: 76px;
+    background-image: url(../img/sound.png);
+    background-repeat: repeat-x;
+    background-size: 25%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 18px;
+    margin: 10px;
+}
+h4{
+    font-size: 14px;
+    margin: 20px;
+}
+.go{
+    color: #000000;
+}
+
+/* -----playlist main----- */
+.playlist section{
+    height: 300px;
+    padding: 20px;
+    margin: 50px 0 50px 50px;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 0 20px rgb(230, 230, 230);
+    text-shadow: 0 0 20px rgb(230, 230, 230);
+}
+.playlist h2{
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.playlist1 p{
+    font-size: 18px;
+}
+.playlist .playlistfoto{
+    width: 25%;
+    height: 128px;
+    background-image: url(../img/sound.png);
+    background-repeat: repeat-x;
+    background-size: 25%;
+    margin: 0 auto;
+}
+.playlist .thanks{
+    font-size: 36px;
+    color: #000000;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 20px;
+    transition: color 2s, background-color 1s;
+}
+.playlist .thanks:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* -----Social Media----- */
+.social{
+    width: 50px;
+    height: 100px;
+    overflow: hidden;
+    position: fixed;
+    top: 200px;
+    right: 0;
+}
+.facebook, .instagram{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: background-image 1s;
+}
+.facebook{
+    background-image: url(../img/fb.png);
+}
+.instagram{
+    background-image: url(../img/instagram.png);
+}
+.facebook:hover{
+    cursor: pointer;
+    background-image: url(../img/fb\ color.png);
+}
+.instagram:hover{
+    cursor: pointer;
+    background-image: url(../img/instagram\ color.png);
+}
+.facebook a, .instagram a{
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+/* ----- Footer ----- */
+footer{
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+}
+.foot{
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/music-note.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+}
+.foot a{
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+footer nav{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+footer ul, .reserved{
+    text-align: center;
+}
+footer a, .reserved{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* ---Responsive--- */
+@media only screen and (max-width: 820px) {
+    main{
+        padding: 50px 50px;
+    }
+    .hits{
+        flex-wrap: wrap;
+    }
+    .hits article{
+        margin-right: 50px;
+    }
+    .latest div{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 390px) {
+    header{
+        padding: 5px 10px;
+    }
+    h1{
+        margin-right: 15px;
+    }
+    header li{
+        margin-right: 10px;
+    }
+    .hits{
+        flex-wrap: wrap;
+    }
+    .latest div{
+        flex-wrap: wrap;
+    }
+}
